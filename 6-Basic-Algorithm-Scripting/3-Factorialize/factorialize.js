@@ -1,0 +1,33 @@
+/* 
+                            Factorialize a Number
+
+Return the factorial of the provided integer.
+
+If the integer is represented with the letter n, a factorial is the product of all positive integers less than or equal to n.
+
+Factorials are often represented with the shorthand notation n!
+
+For example: 5! = 1 * 2 * 3 * 4 * 5 = 120
+
+Only integers greater than or equal to zero will be supplied to the function. 
+*/
+
+/*--------- By Recursion ---------*/
+function factorializeRecursion(num) {
+  if (num === 0) return 1;
+  return factorializeRecursion(num - 1) * num;
+}
+//Driver Code
+console.log(factorializeRecursion(5));
+
+/*--------- By Loop ---------*/
+const factorializeByLoop = (num) => {
+  let fact = 1;
+  for (let i = num; i > 0; i--) {
+    fact = fact * i;
+  }
+  return fact;
+};
+
+//Driver Code
+console.log(factorializeByLoop(5));
